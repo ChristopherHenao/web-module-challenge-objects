@@ -150,7 +150,7 @@ Use the getReviewsByRating function below to do the following:
     let ratingArray = [];
     for( let i = 0; i < array.length; i++){
       if (array[i].rating >= rating && array[i].rating <= (rating + 0.9)){
-        ratingArray = [array[i]];
+        ratingArray.push(array[i]);
       }
     }
     return ratingArray;
