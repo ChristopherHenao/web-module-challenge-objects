@@ -145,11 +145,10 @@ Use the getReviewsByRating function below to do the following:
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}
   ]
 */
-
  function getReviewByRating(array, rating) {
     let ratingArray = [];
     for( let i = 0; i < array.length; i++){
-      if (array[i].rating >= rating && array[i].rating <= (rating + 0.9)){
+      if (array[i].rating >= rating && array[i].rating < (rating + 1)){
         ratingArray.push(array[i]);
       }
     }
@@ -169,11 +168,17 @@ Use the getLongReviews function below to do the following:
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." }
   ]
 */
-
-function getLongReviews(/* code here */) {
-    /* code here */
-  }
-  
+function getLongReviews(array) {
+    let longReviewsArray = [];
+    for(let i = 0; i < array.length; i++){
+      
+      if (array[i].feedback.split(" ").length > 15){
+        longReviewsArray.push(array[i]);
+      }
+     }
+return longReviewsArray;
+}
+console.log(getLongReviews(reviews));  
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
