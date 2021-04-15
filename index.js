@@ -179,6 +179,7 @@ function getLongReviews(array) {
 return longReviewsArray;
 }
 console.log(getLongReviews(reviews));  
+ 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
