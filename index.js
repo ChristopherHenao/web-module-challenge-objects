@@ -124,12 +124,10 @@ Use the getLastReview function below to do the following:
   
   For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review, and their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
 */
-
-
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(array) {
+  return `${array[array.length-1].name} gave the restaurant a ${array[array.length-1].rating} star review, and their feedback was: ${array[array.length-1].feedback}`;
 } 
-
+getLastReview(reviews);
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
@@ -148,10 +146,16 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(array, rating) {
+    let ratingArray = [];
+    for( let i = 0; i < array.length; i++){
+      if (array[i].rating >= rating && array[i].rating <= (rating + 0.9)){
+        ratingArray = [array[i]];
+      }
+    }
+    return ratingArray;
   }
-
+console.log(getReviewByRating(reviews, 3));
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
